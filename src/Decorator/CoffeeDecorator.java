@@ -1,14 +1,16 @@
 package Decorator;
 
+import java.math.BigDecimal;
+
 abstract class CoffeeDecorator implements Coffee {
-    protected final Coffee decoratedCoffee;
+    protected Coffee decoratedCoffee;
 
     public CoffeeDecorator(Coffee coffee) {
         this.decoratedCoffee = coffee;
     }
 
     @Override
-    public int getCost() {
-        return decoratedCoffee.getCost();
+    public BigDecimal cost() {
+        return decoratedCoffee.cost();
     }
 }

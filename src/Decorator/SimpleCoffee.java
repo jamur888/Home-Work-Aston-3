@@ -1,8 +1,10 @@
 package Decorator;
 
-public class SimpleCoffee implements Coffee {
+import java.math.BigDecimal;
+
+class SimpleCoffee implements Coffee {
     @Override
-    public int getCost() {
-        return 100;
+    public BigDecimal cost() {
+        return AppConstants.BASE_COFFEE_PRICE;
     }
 }

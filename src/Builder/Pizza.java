@@ -1,9 +1,9 @@
 package Builder;
 
-class Pizza {
-    private String dough;
-    private String sauce;
-    private String topping;
+public class Pizza {
+    private final String dough;
+    private final String sauce;
+    private final String topping;
 
     private Pizza(Builder builder) {
         this.dough = builder.dough;
@@ -17,6 +17,7 @@ class Pizza {
     }
 
     public static class Builder {
+
         private String dough;
         private String sauce;
         private String topping;

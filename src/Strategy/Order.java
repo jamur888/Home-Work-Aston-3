@@ -1,19 +1,24 @@
 package Strategy;
 
+import java.math.BigDecimal;
+
 class Order {
-    private final int amount;
-    private PaymentStrategy strategy;
 
-    public Order(int amount, PaymentStrategy strategy) {
-        this.amount = amount;
-        this.strategy = strategy;
+    private PaymentStrategy paymentStrategy;
+    private final BigDecimal totalAmount;
+
+    public Order(PaymentStrategy paymentStrategy, BigDecimal totalAmount) {
+        this.paymentStrategy = paymentStrategy;
+        this.totalAmount = totalAmount;
     }
 
-    public void setStrategy(PaymentStrategy strategy) {
-        this.strategy = strategy;
+    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
     }
 
-    public void process() {
-        strategy.pay(amount);
+    public void processPayment() {
+        paymentStrategy.pay(totalAmount);
     }
+
 }
+

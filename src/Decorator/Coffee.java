@@ -1,5 +1,7 @@
 package Decorator;
 
+import java.math.BigDecimal;
+
 interface Coffee {
-    int getCost();
+    BigDecimal cost();
 }

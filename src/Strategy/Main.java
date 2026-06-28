@@ -1,11 +1,16 @@
 package Strategy;
 
+import java.math.BigDecimal;
+
 class Main {
     public static void main(String[] args) {
-        Order order = new Order(5000, new CreditCardPayment());
-        order.process();
+        BigDecimal orderAmount = new BigDecimal("750.00");
 
-        order.setStrategy(new CryptoPayment());
-        order.process();
+        Order order = new Order(new CreditCardPayment(), orderAmount);
+        order.processPayment();
+
+        order.setPaymentStrategy(new CryptoPayment());
+        order.processPayment();
+        System.out.println(AppConstants.TEXT_SEPARATOR);
     }
 }
