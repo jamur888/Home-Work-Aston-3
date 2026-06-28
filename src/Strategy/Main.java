@@ -11,6 +11,6 @@ class Main {
 
         order.setPaymentStrategy(new CryptoPayment());
         order.processPayment();
-        System.out.println(AppConstants.TEXT_SEPARATOR);
+
     }
 }
