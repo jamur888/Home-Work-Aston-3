@@ -1,12 +1,10 @@
 package Builder;
 
-// Класс продукта
 class Pizza {
     private String dough;
     private String sauce;
     private String topping;
 
-    // Приватный конструктор: объект создается только через Билдер
     private Pizza(Builder builder) {
         this.dough = builder.dough;
         this.sauce = builder.sauce;
@@ -18,7 +16,6 @@ class Pizza {
         return "Пицца [тесто=" + dough + ", соус=" + sauce + ", топпинг=" + topping + "]";
     }
 
-    // Вложенный статический класс Билдера
     public static class Builder {
         private String dough;
         private String sauce;
@@ -26,7 +23,7 @@ class Pizza {
 
         public Builder setDough(String dough) {
             this.dough = dough;
-            return this; // Возвращаем self для chain-вызовов
+            return this;
         }
 
         public Builder setSauce(String sauce) {

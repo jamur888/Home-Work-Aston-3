@@ -6,6 +6,6 @@ public class Main {
         myCoffee = new MilkDecorator(myCoffee);
         myCoffee = new SugarDecorator(myCoffee);
 
-        System.out.println("Итоговая стоимость: " + myCoffee.getCost() + " руб."); //145
+        System.out.println("Итоговая стоимость: " + myCoffee.getCost() + " руб.");
     }
 }

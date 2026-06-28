@@ -3,7 +3,7 @@ package Proxy;
 public class Main {
     public static void main(String[] args) {
         Subject proxy = new ProxySubject();
-        proxy.request(); // Инициализирует и вызовет объект
+        proxy.request();
     }
 }
 

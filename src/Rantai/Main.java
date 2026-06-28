@@ -5,10 +5,9 @@ public class Main {
         Handler logger = new LogHandler();
         Handler auth = new AuthHandler();
 
-        // Сборка цепочки
         logger.setNext(auth);
 
-        logger.handle("AUTH"); // Передастся в AuthHandler
-        logger.handle("LOG");  // Обработается в LogHandler
+        logger.handle("AUTH");
+        logger.handle("LOG");
     }
 }
